@@ -10,7 +10,7 @@ Welcome to Gemini's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-
+gemini
 
 Indices and tables
 ==================
