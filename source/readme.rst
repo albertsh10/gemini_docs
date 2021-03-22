@@ -13,13 +13,13 @@ Look how easy it is to use. Imaging you have a model code with ``model_runner.py
 
 Defaultly, you will need to activate the environmental setting and then run with command:
 
-.. code-block:: command 
+.. code-block:: shell 
 
     python model_runner.py *argv ...
 
 When using Gemini, just do the following replacement on ``python`` command, magic happens:
 
-.. code-block:: command 
+.. code-block:: shell 
 
     gemini_python model_runner.py *argv ...
 

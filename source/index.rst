@@ -11,9 +11,10 @@ Welcome to Gemini's documentation!
    :caption: Contents:
 
   readme
-  structure
-  configuration
   playwithbert
+  configuration
+  showcasesonbert
+  structure
   modules
 
 Indices and tables
