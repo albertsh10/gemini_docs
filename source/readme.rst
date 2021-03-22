@@ -6,7 +6,9 @@ GEMINI is the abbreviation of Generic Model Parallel Instrumenter. It genericall
 
 How Gemini Works?
 -----------------
-The essences of Gemini make plays on the python ASTs, and recognise any supported types of DSL that used by AI framework to construct models. e.g. ``tensorflow.nn.dropout`` in ``tensorflow``, and ``torch.nn.conv2d`` in ``torch``
+The essences of Gemini make plays on the python ASTs, and recognise any supported types of DSL that used by AI framework to construct models. 
+e.g. ``tensorflow.nn.dropout`` in ``tensorflow``, and ``torch.nn.conv2d`` in ``torch``.
+A fruitful and extensible pass mechanism is design to apply transformations on the code AST, to enable sharding / pipeline and hybrid model parallel patterns on the code AST.
 Look how easy it is to use. Imaging you have a model code with ``model_runner.py`` as your python entry
 
 Defaultly, you will need to activate the environmental setting and then run with command:
@@ -62,21 +64,58 @@ Bingo! Now you can enjoy the boost by using model parallel in
 Features
 --------
 
-- Be awesome
-- Make things faster
+- For Users: Painless model parallel with your single device training code. You **Do not need to change any piece of code** to enable model parallel on main-stream AI frameworks, including Tensorflow and Pytorch.
+- For Users: **Naturally compatible with different SW stacks with devices**. You do not worry about either the device is CPU/ GPU or DTU. just make sure the original code runs OK on single device.
+- For Users: **Fruitful pattern of model parallel**. You can run with **sharding mode**, **pipeline mode** and in mix of the both.
+- For Users: A **Clean Solution for large-scale training**. use horovod/mpi to enable data parallel on multiple server nodes. and Gemini will automatically chops the model into parts to fit in the computing devices within each server node.
+
+- For Developers: A **Generic Pass Mechanism** that maximise the generality of model parallel functionality. The effort to support any new models is hence alleviated.
+- For Developers: A **Easy to plugin interface** to implement new passes. Declarative-like method may support in future version. You will be able to implement passes with tbl-gen-like way.
+- For Developers: **Round-trip functionality works along all the procedures**, that enables you debug model parallel passes without real run trials. **Saving time is saving money**.
+- For Developers: **Graphviz support for python AST**, for debug use
 
 Installation
 ------------
 
-Install $project by running:
+Step 1. Clone the code by command:
 
-    install project
+    git clone git@git.enflame.cn:heng.shi/gemini.git
+
+Step 2. Initialize the project by:
+
+    make init
+
+this command will install all the requirements, init the submodules and update them.
+
+Entry of Gemini
+---------------
+
+If you want to try Gemini with samples, just type the Makefile entry `make samples/<sample_name>`
+For instance, run **Bert-Large**:
+
+    make samples/bert
+
+If you want to test all the Gemini cases, type:
+
+    make tests
+
+The following table lists all the entries of Gemini for shortcuts:
+
 
 Contribute
 ----------
 
-- Issue Tracker: github.com/$project/$project/issues
-- Source Code: github.com/$project/$project
+- Gemini Project: git@git.enflame.cn:heng.shi/gemini.git
+- Gemini documentation (also a submodule of Gemini project): git@github.com:albertsh10/gemini_docs.git 
+
+Please make sure you have read through the code and understand the following aspects of the design thoughts:
+
+- Model parallel basic concepts, some technical details will be a good plus.
+- Compilation process of python
+- Solid python fundamentals
+- Meta-programming with python
+- List Monad and other functional programming design patterns
+- Handy experience with related toolchains, includes: cmake/Makefile, python ast module, functools, pep_linter, sphinx.
 
 Support
 -------
