@@ -81,9 +81,9 @@ Step 1. Clone the code by command:
 
     git clone git@git.enflame.cn:heng.shi/gemini.git
 
-Step 2. Initialize the project by:
+Step 2. Initialize the project and install by:
 
-    make init
+    make init && make install
 
 this command will install all the requirements, init the submodules and update them.
 
@@ -91,16 +91,26 @@ Entry of Gemini
 ---------------
 
 If you want to try Gemini with samples, just type the Makefile entry `make samples/<sample_name>`
-For instance, run **Bert-Large**:
 
+    make samples/
+
+For instance, run **Bert-Large**, **mnist model**, and **python ast dump**, you can run with command:
+    
     make samples/bert
+
+    make samples/mnist
+
+    make samples/dump_ast
 
 If you want to test all the Gemini cases, type:
 
     make tests
 
-The following table lists all the entries of Gemini for shortcuts:
+If you want to clean up the code with PEP8 standard, do:
 
+    make lint
+
+    
 
 Contribute
 ----------
@@ -117,11 +127,19 @@ Please make sure you have read through the code and understand the following asp
 - List Monad and other functional programming design patterns
 - Handy experience with related toolchains, includes: cmake/Makefile, python ast module, functools, pep_linter, sphinx.
 
-Support
+What's in coming next?
+----------------------
+
+- Autotuner
+- Compatible solution with horovod (for multiple server node)
+- Tuned Performance on GPU (on Gemini's own performance, regarding sharding and pipeline patterns)
+- Tuned Performance on DTU (also including tuned OP and fusions on targeted models)
+- 
+
+Authors
 -------
 
-If you are having issues, please let us know.
-We have a mailing list located at: project@google-groups.com
+Albert Shi, Tianyu Jiang, Pilz Wang and Chris Liu
 
 License
 -------

@@ -1,5 +1,5 @@
-gemini
-======
+Documentation
+=============
 
 .. toctree::
    :maxdepth: 4
