@@ -70,9 +70,9 @@ Features
 - For Users: A **Clean Solution for large-scale training**. use horovod/mpi to enable data parallel on multiple server nodes. and Gemini will automatically chops the model into parts to fit in the computing devices within each server node.
 
 - For Developers: A **Generic Pass Mechanism** that maximise the generality of model parallel functionality. The effort to support any new models is hence alleviated.
-- For Developers: A **Easy to plugin interface** to implement new passes. Declarative-like method may support in future version. You will be able to implement passes with tbl-gen-like way.
+- For Developers: A **Extensible plugin interface** that helps you to implement new passes as simple as posible. Declarative-like method may support in future version. You will be able to implement passes with tbl-gen-like way.
 - For Developers: **Round-trip functionality works along all the procedures**, that enables you debug model parallel passes without real run trials. **Saving time is saving money**.
-- For Developers: **Graphviz support for python AST**, for debug use
+- For Developers: **Visualize your model AST tree**, we have Graphviz support for debug ease.
 
 Installation
 ------------
