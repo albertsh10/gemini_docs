@@ -1,8 +1,17 @@
+.. image:: figures/saga.JPG
+  :width: 640
+  :alt: saga
+
 What is Gemini?
 ===============
-Gemini will solve your problem, if you wish to run your AI model in a manner of model parallel without any pain and effort in modifying/transplanting/suiting your model code.
+The awesomely, powerful GEMINI, refers to the third golden knight of the Zodiac under the constellation named Gemini, of which someone might think of.
 
-GEMINI is the abbreviation of Generic Model Parallel Instrumenter. It generically suppport any main-stream AI frameworks, and make supports on its domain-specific data-flow language.
+However, we present the Generic Model Parallel Instrumenter (GEMINI). With the same name, Gemini platform powers your with magics for extra-large-scale AI models.
+
+It powers your AI model, no matter what AI framework it was created upon, safely transplant to a farm of chips without any pain in drastically revisions.
+
+Continue and enjoy the ease of Gemini!
+
 
 How Gemini Works?
 -----------------

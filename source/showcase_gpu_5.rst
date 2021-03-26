@@ -71,13 +71,24 @@ Model Parallel Hyperparams
 Model Training Hyperparams
 --------------------------
 
-- batch size = ?
+- batch size = 12
 - max seq len = 384
 - model type: ``BERT-LARGE``
 
 Status
 ------
 
-- ``avg_step_fps`` = ?
+- ``avg_step_fps`` = 5.73
 
-# figure
+Snapshots - configuration
+-------------------------
+
+.. image:: figures/8x4bs4_config_gpu.JPG
+  :width: 400
+  :alt: model parallel hyper-parameter configuration
+
+Snapshots - results 
+-------------------
+.. image:: figures/8x4bs12_gpu.JPG
+  :width: 1000
+  :alt: running result
