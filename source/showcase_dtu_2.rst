@@ -80,4 +80,15 @@ Status
 
 - ``avg_step_fps`` = ?
 
-# figure
+Snapshots - configuration
+-------------------------
+
+.. image:: figures/8x4bs2_config.JPG
+  :width: 400
+  :alt: model parallel hyper-parameter configuration
+
+Snapshots - results 
+-------------------
+.. image:: figures/8x4bs2.JPG
+  :width: 1000
+  :alt: running result

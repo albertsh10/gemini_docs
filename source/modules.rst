@@ -1,7 +1,8 @@
 Documentation
 =============
 
-.. toctree::
-   :maxdepth: 4
+**Stay tuned! Magic comes!**
+.. .. toctree::
+..    :maxdepth: 4
 
-   gemini
+..   gemini, not done yet
