@@ -71,13 +71,25 @@ Model Parallel Hyperparams
 Model Training Hyperparams
 --------------------------
 
-- batch size = ?
+- batch size = 4
 - max seq len = 384
 - model type: ``BERT-LARGE``
 
 Status
 ------
 
-- ``avg_step_fps`` = ?
+- ``avg_step_fps`` = None
+- fail with ``OOM`` error, HBM allocation fail
 
-# figure
+Snapshots - configuration
+-------------------------
+
+.. image:: figures/8x4bs4_config.JPG
+  :width: 400
+  :alt: model parallel hyper-parameter configuration
+
+Snapshots - results 
+-------------------
+.. image:: figures/8x4bs4.JPG
+  :width: 1000
+  :alt: running result

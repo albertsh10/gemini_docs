@@ -71,14 +71,14 @@ Model Parallel Hyperparams
 Model Training Hyperparams
 --------------------------
 
-- batch size = ?
+- batch size = 2
 - max seq len = 384
 - model type: ``BERT-LARGE``
 
 Status
 ------
 
-- ``avg_step_fps`` = ?
+- ``avg_step_fps`` = 0.588
 
 Snapshots - configuration
 -------------------------
