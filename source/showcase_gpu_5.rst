@@ -78,17 +78,17 @@ Model Training Hyperparams
 Status
 ------
 
-- ``avg_step_fps`` = 5.73
+- ``avg_step_fps`` = 8.6
 
 Snapshots - configuration
 -------------------------
 
-.. image:: figures/8x4bs4_config_gpu.JPG
+.. image:: figures/8x4bs16_config_gpu.JPG
   :width: 400
   :alt: model parallel hyper-parameter configuration
 
 Snapshots - results 
 -------------------
-.. image:: figures/8x4bs12_gpu.JPG
+.. image:: figures/8x4bs16_gpu.JPG
   :width: 1000
   :alt: running result
